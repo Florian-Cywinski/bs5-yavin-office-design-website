@@ -47,3 +47,21 @@ function incrementStats() {
 document.addEventListener('DOMContentLoaded', userScroll);
 document.addEventListener('DOMContentLoaded', incrementStats);
 document.querySelector('#to-top').addEventListener('click', scrollToTop);
+
+// To close the burger menu after clicking a link
+
+// Get all the Navbar links
+const navLinks = document.querySelectorAll(".nav-link");
+
+// Function to close the collapsed menu
+function closeNavbar() {
+  const navbarCollapse = document.querySelector(".navbar-collapse");
+  if (navbarCollapse.classList.contains("show")) {
+  navbarCollapse.classList.remove("show");
+  }
+}
+
+// Add click event listeners to all the Navbar links
+navLinks.forEach(function (link) {
+  link.addEventListener("click", closeNavbar);
+});
