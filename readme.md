@@ -8,7 +8,7 @@ Check out the site :) - https://bs5-yavin-office-design-website-fc.netlify.app/
 
 ## Features
 
-- Clean design with background images/patterns
+- Clean design with background images / patterns
 - Responsive design
 - Custom JavaScript for the stat counter
 - Nav scroll effect

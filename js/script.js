@@ -6,10 +6,17 @@ function userScroll() { // To have the navbar a dark background when scroll on t
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
         navbar.classList.add('navbar-sticky');  // To have a light bg which is a bit transparent and have a shaddow - see in styles.scss
+        toTopBtn.classList.add('show'); /* To make the to-top-button visible when the page is not on the top */
       } else {  // On the top of the page (without scrolling)
         navbar.classList.remove('navbar-sticky');
+        toTopBtn.classList.remove('show');  /* To make the to-top-button invisible when the page is on the top */
       }
     });
+}
+
+function scrollToTop() {  /* To make the to-top-button (in)visible when the page is (not) on the top */
+  document.body.scrollTop = 0;  // This is for the Safari browser
+  document.documentElement.scrollTop = 0; // This is for the Chrome, FF and IE browser
 }
   
 function incrementStats() {
@@ -39,3 +46,4 @@ function incrementStats() {
 // Event Listeners
 document.addEventListener('DOMContentLoaded', userScroll);
 document.addEventListener('DOMContentLoaded', incrementStats);
+document.querySelector('#to-top').addEventListener('click', scrollToTop);

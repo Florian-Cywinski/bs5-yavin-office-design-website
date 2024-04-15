@@ -54,6 +54,35 @@
   width: 600px;
 }
 
+.to-top-btn {
+  position: fixed;
+  z-index: 20;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0; /* To make the to-top-button invisible when the page is on the top */
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: #44434a;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #1d1d21;
+  }
+
+  img {
+    margin-bottom: 0.25rem;
+    width: 18px;
+  }
+}
+
+.show { /* The is added due to JS when scrolling down */
+  opacity: 1; /* To make the to-top-button visible when the page is not on the top */
+}
+
 /* Media query */
 @media (max-width: 992px) {
     .xl-text {
